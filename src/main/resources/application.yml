@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    druid:
+      mate:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://mysql-test-mate.gymboglobal.com.cn:3306/mateqa?useUnicode=true&characterEncoding=utf8&useCursorFetch=true
+      username: mateqa_dev
+      password: D3a%FEXEs5
+      weight: 1 #用于没有指定数据库源的查询时的权重,默认1,大于10按照10
+      initialSize: 10
+      minIdle: 10
+      maxActive: 500
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 'X'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: false
+      maxPoolPreparedStatementPerConnectionSize: -1
+      filters: stat
+
+
+
+
+
